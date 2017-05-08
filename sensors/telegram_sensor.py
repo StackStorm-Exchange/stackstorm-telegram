@@ -1,15 +1,15 @@
 import telegram
 from st2reactor.sensor.base import PollingSensor
 
+
 class TelegramSensor(PollingSensor):
     def __init__(self, sensor_service, config, poll_interval):
-       super(TelegramSensor, self).__init__(sensor_service=sensor_service,
-                                            config=config,
-                                            poll_interval=poll_interval)
-       self._trigger_name = 'new_update'
-       self._trigger_pack = 'telegram'
-       self._trigger_ref = '.'.join([self._trigger_pack, self._trigger_name])
-
+        super(TelegramSensor, self).__init__(sensor_service=sensor_service,
+                                             config=config,
+                                             poll_interval=poll_interval)
+        self._trigger_name = 'new_update'
+        self._trigger_pack = 'telegram'
+        self._trigger_ref = '.'.join([self._trigger_pack, self._trigger_name])
 
     def setup(self):
         self._client = telegram.Bot(token=self._config['apikey'])
