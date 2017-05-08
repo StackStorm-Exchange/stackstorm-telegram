@@ -19,7 +19,7 @@ class TelegramSensor(PollingSensor):
         if not self._last_id:
             updates = self._client.getUpdates()
         else:
-            updates = self._client.getUpdates(offset=self._last_id+1)
+            updates = self._client.getUpdates(offset=self._last_id + 1)
 
         if updates:
             for u in updates:
