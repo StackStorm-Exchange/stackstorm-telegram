@@ -1,6 +1,6 @@
 ---
   name: "send_message"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "send a message to a user or group"
   enabled: true
   entry_point: "send_message.py"
