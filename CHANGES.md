@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.0
+
+* Drop Python 2.7 support
+
 ## 0.2.4
 
 - Another `urllib3` bump, to `1.24.2` due to security vulnerability
